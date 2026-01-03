@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitAI</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="wholepage">
+        <div class="header">
+            <h1>Welcome to DigitAI</h1>
+        </div>
+        <div class="topBox">
+            <div class = "leftBox">
+                <div class = "topBtns">
+                    <button class = "draw">DRAW</button>
+                    <button class = "imgupload">IMAGE UPLOAD</button>
+                </div>
+                <canvas id = "drawcanvas" class = "last" width="500" height="300"></canvas>
+                <input type="file" id="imgInput" accept="image/*" style="display:none">
+                    <div class = "bottom">
+                        <div class = "bottomBtns">
+                            <button class = "clear">CLEAR</button>
+                        </div>
+                        <button class = "generate">GENERATE PREDICTION</button>
+                    </div>
+                </div>
+                <div class="rightBox">
+                    <div class="rightHeading">
+                        <p class="rhead">Prediction Results</p>
+                    </div>
+                    <div class="respic">
+                        <div class="main-pred-digit" id="mainDigit">–</div>
+                        <div class="main-pred-acc" id="mainAcc">Accuracy: –%</div>
+                    </div>
+
+                    <div class="acchead">
+                        <span class="accuracyheading">ALL PREDICTIONS</span>
+                    </div>
+                    <div class="predictions">
+                        <div class="pred-column" id="col-left"></div>
+                        <div class="pred-column" id="col-right"></div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="bottomBox">
+            <div class = "trainhead">
+                <p class = "trainhead">Model Retraining</p>
+            </div>
+            <div class = "trainpara">
+                <p class = "trainpara">Improve by providing your feedback if the prediction is incorrect.</p>
+            </div>
+            <div class = "corrtab">
+                <p class = "corval">The Correct value is:<input id="correctDigit" type="number" min="0" max="9" class="correct-input"></p>
+            </div>
+            <div>
+                <button class = "retrain">ADD TO TRAIN SET</button>
+            </div>
+        </div>
+    </div>
+     <script src="script.js"></script>
+</body>
+</html>
